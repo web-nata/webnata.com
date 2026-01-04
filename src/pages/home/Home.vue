@@ -11,15 +11,17 @@
 
   </div>
   <div class="flex mt-8 gap-6 justify-center">
-    <a href="#contact" class="bg-accent text-white px-8 py-4 text-xl font-semibold
-            hover:bg-accent/90 transition">
+    <router-link to="/contact" class="bg-accent text-white px-8 py-4 text-xl font-semibold
+           hover:bg-accent/90 transition">
       Get a Free Quote
-    </a>
-    <a href="#portfolio" class="border border-accent text-accent px-8 py-4 text-xl font-bold
-            hover:bg-accent/10 transition">
+    </router-link>
+
+    <router-link to="/portfolio" class="border border-accent text-accent px-8 py-4 text-xl font-bold
+           hover:bg-accent/10 transition">
       View Our Work
-    </a>
+    </router-link>
   </div>
+
 
   <div class="flex justify-center mt-60 bg-background/40 backdrop-blur-md shadow-2xl overflow-hidden
            w-full">
@@ -49,51 +51,55 @@
         <!-- subtle glow behind image -->
         <div class="absolute -inset-8 -z-10 bg-primary-500/20 blur-3xl rounded-full"></div>
       </div>
-      <div class="">
-        <a href="#portfolio" class="bg-accent text-white px-6 py-3 font-semibold
-            hover:bg-accent/90 transition">
+      <div>
+
+        <router-link to="/portfolio" class="bg-accent text-white px-6 py-3 font-semibold
+         hover:text-gray-300 transition">
           See Our Work
-        </a>
+        </router-link>
       </div>
+
 
     </div>
   </div>
 
-<!-- About Us Section - Alternative Design -->
-<section class="relative px-6 py-28">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
-    
-    <!-- Text Column -->
-    <div class="flex-1 text-white">
-      <h2 class="text-5xl lg:text-6xl font-playfair italic mb-6">
-        Who We Are
-      </h2>
-      <p class="text-xl lg:text-2xl leading-relaxed mb-8">
-        We’re a <span class="font-playfair italic text-accent">Brisbane-based duo</span> passionate about helping small businesses shine online.  
-        We combine <span class="font-playfair italic text-accent">creative design</span> and <span class="font-playfair italic text-accent">smart development</span> 
-        to build websites that are <span class="font-playfair italic text-accent">fast</span>, <span class="font-playfair italic text-accent">modern</span>, and <span class="font-playfair italic text-accent">affordable</span>.
-      </p>
+  <!-- About Us Section - Alternative Design -->
+  <section class="relative px-6 py-28">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
-      <!-- CTA -->
-      <a href="#our-team"
-         class="inline-block bg-accent text-white px-6 py-3 font-semibold
-                hover:bg-accent/90 transition transform hover:scale-105">
-        Meet Our Team
-      </a>
-    </div>
+      <!-- Text Column -->
+      <div class="flex-1 text-white">
+        <h2 class="text-5xl lg:text-6xl font-playfair italic mb-6">
+          Who We Are
+        </h2>
+        <p class="text-xl lg:text-2xl leading-relaxed mb-8">
+          We’re a <span class="font-playfair italic text-accent">Brisbane-based duo</span> passionate about helping
+          small businesses shine online.
+          We combine <span class="font-playfair italic text-accent">creative design</span> and <span
+            class="font-playfair italic text-accent">smart development</span>
+          to build websites that are <span class="font-playfair italic text-accent">fast</span>, <span
+            class="font-playfair italic text-accent">modern</span>, and <span
+            class="font-playfair italic text-accent">affordable</span>.
+        </p>
 
-    <!-- Image Column -->
-    <div class="flex-1 relative">
-      <div class="relative w-full max-w-md mx-auto">
-        <img src="/images/brisbane.webp" alt="Our Team" 
-             class="rounded-3xl shadow-2xl animate-fadeUp" />
-        <!-- subtle floating effect -->
-        <div class="absolute -inset-6 -z-10 bg-primary-500/20 blur-3xl rounded-2xl animate-fadeUp"></div>
+        <!-- CTA -->
+        <router-link to="/team" class="bg-accent text-white px-6 py-3 font-semibold
+         hover:text-gray-300 transition">
+          Meet Our Team
+        </router-link>
       </div>
-    </div>
 
-  </div>
-</section>
+      <!-- Image Column -->
+      <div class="flex-1 relative">
+        <div class="relative w-full max-w-md mx-auto">
+          <img src="/images/brisbane.webp" alt="Our Team" class="rounded-3xl shadow-2xl animate-fadeUp" />
+          <!-- subtle floating effect -->
+          <div class="absolute -inset-6 -z-10 bg-primary-500/20 blur-3xl rounded-2xl animate-fadeUp"></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 
 
