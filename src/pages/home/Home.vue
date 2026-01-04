@@ -21,9 +21,9 @@
     </a>
   </div>
 
-  <div class="flex justify-center mt-80 px-6">
-    <div class="relative bg-background/20 backdrop-blur-md border border-background shadow-2xl overflow-hidden
-           max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 p-10
+  <div class="flex justify-center mt-60 bg-background/40 backdrop-blur-md shadow-2xl overflow-hidden
+           w-full">
+    <div class="relative max-w-7xl  grid grid-cols-1 lg:grid-cols-2 gap-10 py-28
            ">
       <!-- Text -->
       <div class="flex flex-col justify-center text-white">
@@ -49,7 +49,7 @@
         <!-- subtle glow behind image -->
         <div class="absolute -inset-8 -z-10 bg-primary-500/20 blur-3xl rounded-full"></div>
       </div>
-      <div class="mt-6">
+      <div class="">
         <a href="#portfolio" class="bg-accent text-white px-6 py-3 font-semibold
             hover:bg-accent/90 transition">
           See Our Work
@@ -60,8 +60,8 @@
   </div>
 
 <!-- About Us Section - Alternative Design -->
-<section class="relative mt-32 px-6 py-24">
-  <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+<section class="relative px-6 py-28">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
     
     <!-- Text Column -->
     <div class="flex-1 text-white">
@@ -76,7 +76,7 @@
 
       <!-- CTA -->
       <a href="#our-team"
-         class="inline-block bg-accent text-white px-8 py-4 rounded-xl font-semibold
+         class="inline-block bg-accent text-white px-6 py-3 font-semibold
                 hover:bg-accent/90 transition transform hover:scale-105">
         Meet Our Team
       </a>
@@ -97,7 +97,6 @@
 
 
 
-  <div class="min-h-screen"></div>
 </template>
 
 <script setup>
