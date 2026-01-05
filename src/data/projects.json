@@ -1,23 +1,38 @@
 [
   {
     "id": 1,
-    "title": "Cafe Lumo",
-    "description": "A clean, conversion-focused website built for a local café. Designed mobile-first, optimised for speed, and focused on turning visitors into customers.",
-    "image": "https://picsum.photos/400/300",
-    "liveUrl": "https://example.com"
+    "title": "Personal Portfolio",
+    "description": "A space-themed, interactive portfolio built with Three.js, showcasing creative development through immersive 3D experiences.",
+    "images": [
+      "/images/projects/jlcrodrigues.png",
+      "https://picsum.photos/400/301",
+      "https://picsum.photos/400/302"
+    ],
+    "liveUrl": "https://jlcrodrigues.com",
+    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
   },
   {
     "id": 2,
     "title": "Northside Fitness",
     "description": "A bold, modern website for a personal training studio. Strong typography, clear calls to action, and lightning-fast performance.",
-    "image": "https://picsum.photos/400/301",
-    "liveUrl": "https://example.com"
+    "images": [
+      "https://picsum.photos/400/301",
+      "https://picsum.photos/400/302",
+      "https://picsum.photos/400/303"
+    ],
+    "liveUrl": "https://example.com",
+    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
   },
   {
     "id": 3,
     "title": "Vale Creative Studio",
     "description": "A minimal portfolio site for a creative studio, showcasing work through large visuals, subtle animations, and elegant typography.",
-    "image": "https://picsum.photos/400/302",
-    "liveUrl": "https://example.com"
+    "images": [
+      "https://picsum.photos/400/304",
+      "https://picsum.photos/400/305",
+      "https://picsum.photos/400/306"
+    ],
+    "liveUrl": "https://example.com",
+    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
   }
 ]

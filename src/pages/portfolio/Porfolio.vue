@@ -73,9 +73,10 @@
       :key="project.id"
       :title="project.title"
       :description="project.description"
-      :image="project.image"
+      :images="project.images"
       :liveUrl="project.liveUrl"
       :reverse="index % 2 === 1"
+      :keywords="project.keywords"
     />
   </section>
 </template>
