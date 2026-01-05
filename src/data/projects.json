@@ -1,38 +1,38 @@
 [
   {
     "id": 1,
-    "title": "Personal Portfolio",
-    "description": "A space-themed, interactive portfolio built with Three.js, showcasing creative development through immersive 3D experiences.",
+    "title": "Software Portfolio",
+    "description": "An interactive, space-themed portfolio built to showcase creative development through immersive 3D experiences. Features dynamic animations, responsive design, and smooth performance across devices.",
     "images": [
-      "/images/projects/jlcrodrigues.png",
-      "https://picsum.photos/400/301",
-      "https://picsum.photos/400/302"
+      "/images/projects/jlcrodrigues/0.png",
+      "/images/projects/jlcrodrigues/1.png",
+      "/images/projects/jlcrodrigues/2.png",
+      "/images/projects/jlcrodrigues/3.png"
     ],
     "liveUrl": "https://jlcrodrigues.com",
-    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
+    "keywords": ["Interactive Design", "3D Web", "Creative Coding", "WebGL", "Vue.js"]
   },
   {
     "id": 2,
-    "title": "Northside Fitness",
-    "description": "A bold, modern website for a personal training studio. Strong typography, clear calls to action, and lightning-fast performance.",
+    "title": "Engineering Portfolio",
+    "description": "A sleek, professional portfolio for a mechanical engineer. Highlights projects, technical skills, and achievements through clean layouts, readable typography, and interactive elements that enhance the user experience.",
     "images": [
-      "https://picsum.photos/400/301",
-      "https://picsum.photos/400/302",
-      "https://picsum.photos/400/303"
+      "/images/projects/joao/0.png",
+      "/images/projects/joao/1.png",
+      "/images/projects/joao/2.png",
+      "/images/projects/joao/3.png"
     ],
-    "liveUrl": "https://example.com",
-    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
+    "liveUrl": "https://joao-araujo.vercel.app/",
+    "keywords": ["Professional Portfolio", "Technical Showcase", "Responsive Design"]
   },
   {
     "id": 3,
-    "title": "Vale Creative Studio",
-    "description": "A minimal portfolio site for a creative studio, showcasing work through large visuals, subtle animations, and elegant typography.",
+    "title": "Camera Shop",
+    "description": "A visually striking homepage for an analog camera store. Though a work in progress, it emphasizes clean layouts, high-impact visuals, and subtle animations to convey the brand’s aesthetic and style.",
     "images": [
-      "https://picsum.photos/400/304",
-      "https://picsum.photos/400/305",
-      "https://picsum.photos/400/306"
+      "/images/projects/cameras/0.png"
     ],
-    "liveUrl": "https://example.com",
-    "keywords": ["Three.js", "Vue.js", "GSAP", "WebGL"]
+    "liveUrl": "https://camera-shop-ten.vercel.app/",
+    "keywords": ["E-commerce", "UI Design", "Branding", "Vue.js", "Animations"]
   }
 ]
