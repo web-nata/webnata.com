@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Software Portfolio",
+    "description": "An interactive, space-themed portfolio built to showcase creative development through immersive 3D experiences. Features dynamic animations, responsive design, and smooth performance across devices.",
+    "images": [
+      "/images/projects/jlcrodrigues/0.png",
+      "/images/projects/jlcrodrigues/1.png",
+      "/images/projects/jlcrodrigues/2.png",
+      "/images/projects/jlcrodrigues/3.png"
+    ],
+    "liveUrl": "https://jlcrodrigues.com",
+    "keywords": ["Interactive Design", "3D Web", "Creative Coding", "WebGL", "Vue.js"]
+  },
+  {
+    "id": 2,
+    "title": "Engineering Portfolio",
+    "description": "A sleek, professional portfolio for a mechanical engineer. Highlights projects, technical skills, and achievements through clean layouts, readable typography, and interactive elements that enhance the user experience.",
+    "images": [
+      "/images/projects/joao/0.png",
+      "/images/projects/joao/1.png",
+      "/images/projects/joao/2.png",
+      "/images/projects/joao/3.png"
+    ],
+    "liveUrl": "https://joao-araujo.vercel.app/",
+    "keywords": ["Professional Portfolio", "Technical Showcase", "Responsive Design"]
+  },
+  {
+    "id": 3,
+    "title": "Camera Shop",
+    "description": "A visually striking homepage for an analog camera store. Though a work in progress, it emphasizes clean layouts, high-impact visuals, and subtle animations to convey the brand’s aesthetic and style.",
+    "images": [
+      "/images/projects/cameras/0.png"
+    ],
+    "liveUrl": "https://camera-shop-ten.vercel.app/",
+    "keywords": ["E-commerce", "UI Design", "Branding", "Vue.js", "Animations"]
+  }
+]
