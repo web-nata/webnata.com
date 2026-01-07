@@ -38,11 +38,26 @@
         </div>
       </div>
 
-      <!-- RIGHT: Form -->
+      <!-- RIGHT: Netlify form -->
       <div
         class="bg-background/40 backdrop-blur-lg shadow-2xl rounded-3xl px-6 py-8 md:px-8 md:py-10 text-white"
       >
-        <form @submit.prevent="handleSubmit" class="space-y-6">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="space-y-6"
+        >
+          <!-- Netlify hidden fields -->
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden">
+            <label>
+              Don’t fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
+
           <!-- Name -->
           <div>
             <label class="block text-sm font-semibold mb-2" for="name">
@@ -50,6 +65,7 @@
             </label>
             <input
               id="name"
+              name="name"
               v-model="form.name"
               type="text"
               required
@@ -66,6 +82,7 @@
             </label>
             <input
               id="email"
+              name="email"
               v-model="form.email"
               type="email"
               required
@@ -75,13 +92,14 @@
             />
           </div>
 
-          <!-- Business name (optional) -->
+          <!-- Business (optional) -->
           <div>
             <label class="block text-sm font-semibold mb-2" for="business">
               Business name <span class="text-white/40">(optional)</span>
             </label>
             <input
               id="business"
+              name="business"
               v-model="form.business"
               type="text"
               class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3
@@ -90,41 +108,23 @@
             />
           </div>
 
-          <!-- Budget + timeframe -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-sm font-semibold mb-2" for="budget">
-                Budget <span class="text-white/40">(approx.)</span>
-              </label>
-              <select
-                id="budget"
-                v-model="form.budget"
-                class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3
-                       focus:outline-none focus:ring-2 focus:ring-accent"
-              >
-                <option value="">Not sure yet</option>
-                <option value="<1000">Up to $1,500</option>
-                <option value="1000-3000">$1,500 – $3,000</option>
-                <option value=">3000">$3,000+</option>
-              </select>
-            </div>
-
-            <div>
-              <label class="block text-sm font-semibold mb-2" for="timeframe">
-                Timeframe
-              </label>
-              <select
-                id="timeframe"
-                v-model="form.timeframe"
-                class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3
-                       focus:outline-none focus:ring-2 focus:ring-accent"
-              >
-                <option value="">Flexible / not sure</option>
-                <option value="asap">As soon as possible</option>
-                <option value="1-2 months">Within 1–2 months</option>
-                <option value="3+ months">In 3+ months</option>
-              </select>
-            </div>
+          <!-- Budget (optional) -->
+          <div>
+            <label class="block text-sm font-semibold mb-2" for="budget">
+              Budget (AUD, approx.) <span class="text-white/40">(optional)</span>
+            </label>
+            <select
+              id="budget"
+              name="budget"
+              v-model="form.budget"
+              class="w-full bg-black/30 border border-white/20 rounded-lg px-4 py-3
+                     focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+              <option value="">Not sure yet</option>
+              <option value="up-to-1500">Up to $1,500</option>
+              <option value="1500-3000">$1,500 – $3,000</option>
+              <option value="3000-plus">$3,000+</option>
+            </select>
           </div>
 
           <!-- Message -->
@@ -134,6 +134,7 @@
             </label>
             <textarea
               id="message"
+              name="message"
               v-model="form.message"
               required
               rows="4"
@@ -143,26 +144,13 @@
             ></textarea>
           </div>
 
-          <!-- Status message -->
-          <p v-if="success" class="text-sm text-emerald-400">
-            Thanks! Your message has been sent. We’ll get back to you soon.
-          </p>
-          <p v-if="error" class="text-sm text-red-400">
-            Something went wrong. You can also email us directly at
-            <a href="mailto:hello@webnata.com" class="underline">
-              hello@webnata.com
-            </a>.
-          </p>
-
           <!-- Submit -->
           <button
             type="submit"
-            :disabled="submitting"
             class="w-full bg-accent text-white px-6 py-3 rounded-lg font-semibold
-                   transition hover:-translate-y-1 hover:shadow-xl
-                   disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-none"
+                   transition hover:-translate-y-1 hover:shadow-xl"
           >
-            {{ submitting ? 'Sending...' : 'Send message' }}
+            Send message
           </button>
         </form>
       </div>
@@ -179,35 +167,6 @@ const form = ref({
   email: '',
   business: '',
   budget: '',
-  timeframe: '',
   message: ''
 })
-
-const submitting = ref(false)
-const success = ref(false)
-const error = ref(false)
-
-const handleSubmit = async () => {
-  submitting.value = true
-  success.value = false
-  error.value = false
-
-  try {
-    // TODO: plug in EmailJS / Formspree / your form backend here.
-    // e.g. await emailjs.send(/* ... */)
-
-    console.log('Form submitted', form.value)
-
-    await new Promise(resolve => setTimeout(resolve, 500))
-
-    success.value = true
-    // optionally clear form:
-    // form.value = { name: '', email: '', business: '', budget: '', timeframe: '', message: '' }
-  } catch (e) {
-    console.error(e)
-    error.value = true
-  } finally {
-    submitting.value = false
-  }
-}
 </script>
