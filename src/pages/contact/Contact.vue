@@ -47,6 +47,7 @@
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
+          @submit.prevent="handleSubmit"
           class="space-y-6"
         >
           <!-- Netlify hidden fields -->
@@ -54,7 +55,7 @@
           <p class="hidden">
             <label>
               Don’t fill this out:
-              <input name="bot-field" />
+              <input name="bot-field" v-model="form.botField" />
             </label>
           </p>
 
@@ -144,13 +145,26 @@
             ></textarea>
           </div>
 
+          <!-- Feedback -->
+          <p v-if="success" class="text-sm text-emerald-400">
+            Thanks! Your message has been sent. We’ll get back to you soon.
+          </p>
+          <p v-if="error" class="text-sm text-red-400">
+            Something went wrong. You can also email us directly at
+            <a href="mailto:hello@webnata.com" class="underline">
+              hello@webnata.com
+            </a>.
+          </p>
+
           <!-- Submit -->
           <button
             type="submit"
+            :disabled="submitting"
             class="w-full bg-accent text-white px-6 py-3 rounded-lg font-semibold
-                   transition hover:-translate-y-1 hover:shadow-xl"
+                   transition hover:-translate-y-1 hover:shadow-xl
+                   disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-none"
           >
-            Send message
+            {{ submitting ? 'Sending...' : 'Send message' }}
           </button>
         </form>
       </div>
@@ -167,6 +181,56 @@ const form = ref({
   email: '',
   business: '',
   budget: '',
-  message: ''
+  message: '',
+  botField: ''
 })
+
+const submitting = ref(false)
+const success = ref(false)
+const error = ref(false)
+
+const encode = (data) =>
+  Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+
+const handleSubmit = async () => {
+  // Simple bot check
+  if (form.value.botField) return
+
+  submitting.value = true
+  success.value = false
+  error.value = false
+
+  try {
+    await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': 'contact',
+        name: form.value.name,
+        email: form.value.email,
+        business: form.value.business,
+        budget: form.value.budget,
+        message: form.value.message
+      })
+    })
+
+    success.value = true
+    // Optional: clear fields
+    form.value = {
+      name: '',
+      email: '',
+      business: '',
+      budget: '',
+      message: '',
+      botField: ''
+    }
+  } catch (e) {
+    console.error(e)
+    error.value = true
+  } finally {
+    submitting.value = false
+  }
+}
 </script>
