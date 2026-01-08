@@ -76,7 +76,7 @@
       <!-- IMAGE (SECONDARY) -->
       <div class="relative hidden lg:flex justify-center items-center">
         <img src="/images/responsive.png" alt="Responsive website showcase"
-          class="w-[380px] drop-shadow-2xl rounded-xl" />
+          class="w-[580px] drop-shadow-2xl rounded-xl" />
 
         <!-- subtle glow -->
         <div class="absolute -inset-12 -z-10 bg-primary-500/20 blur-3xl rounded-full"></div>
