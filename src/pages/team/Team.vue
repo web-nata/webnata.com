@@ -2,9 +2,8 @@
   <VantaBackground />
 
   <!-- HEADER -->
-  <section class="relative px-6 py-24">
+  <section class="relative px-6 py-24 mt-8">
     <div class="max-w-6xl mx-auto flex flex-col justify-center items-center text-center text-white">
-
       <h1 class="text-4xl md:text-6xl font-playfair leading-tight max-w-3xl">
         The duo behind
       </h1>
@@ -14,7 +13,7 @@
       </h1>
 
       <p class="text-lg text-white/70 mt-4 max-w-2xl mx-auto">
-        Two engineers. Different paths. One shared taste for building things that work.
+        A Brisbane-based duo with engineering backgrounds and a shared taste for building things that actually work.
       </p>
     </div>
   </section>
@@ -30,7 +29,7 @@
       <div class="relative flex justify-center items-center">
         <img
           src="/images/team/luis.JPG"
-          alt="Luis"
+          alt="Luís"
           class="w-[590px] rounded-3xl drop-shadow-2xl"
         />
 
@@ -39,7 +38,7 @@
 
       <!-- TEXT -->
       <div class="flex flex-col justify-center text-white max-w-xl">
-        <p class="uppercase tracking-widest text-sm text-white mb-6">
+        <p class="uppercase tracking-widest text-sm text-white/60 mb-6">
           Master Developer
         </p>
 
@@ -49,15 +48,15 @@
 
         <p class="text-lg text-white/80 mb-3">
           Software engineer, problem-solver, and the one who insists that good code
-          should look good. He builds fast, purposeful websites where
+          should feel as clean as it looks. He builds fast, purposeful websites where
           <span class="underline underline-offset-4 decoration-accent">
             nothing exists “just because”.
           </span>
         </p>
 
         <p class="text-lg text-white/70">
-          The kind of developer who
-          treats every project like a puzzle worth getting right, not just a template to fill in.
+          Treats every project like a puzzle worth getting right, not just a template to fill in —
+          always chasing that sweet spot between performance, clarity, and a bit of nerdy satisfaction.
         </p>
       </div>
     </div>
@@ -70,7 +69,7 @@
     >
       <!-- TEXT -->
       <div class="text-white max-w-xl order-2 lg:order-1">
-        <p class="uppercase tracking-widest text-sm text-white mb-6">
+        <p class="uppercase tracking-widest text-sm text-white/60 mb-6">
           The asset of the operation
         </p>
 
@@ -79,9 +78,9 @@
         </h3>
 
         <p class="text-lg text-white/80 mb-3">
-          Biomedical engineer turned curious techie — with a talent for seeing
-          how ideas translate into the real world. She brings perspective, intuition and
-          a sharp eye for what actually matters —
+          Biomedical engineer turned curious technologist — with a habit of connecting dots
+          between people, ideas, and how things behave in the real world. She brings perspective,
+          intuition and a sharp eye for what actually matters —
           <span class="underline underline-offset-4 decoration-accent">
             especially when everyone else is overcomplicating things.
           </span>
@@ -89,7 +88,8 @@
 
         <p class="text-lg text-white/70">
           Less “project manager”, more “quiet force of good decisions”.
-          Balances logic with instinct and asks the questions that lead to better results.
+          Balances logic with instinct and keeps Web Nata grounded in solving real problems
+          for real businesses.
         </p>
       </div>
 
